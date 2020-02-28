@@ -6,5 +6,6 @@
 
 
 for t in $(seq 0 0.1 10);do
-echo | awk -v ti=$t '{print ti, (sin(theta)-mu*cos(theta))*g*ti}'
+echo | awk -v ti=$t -v theta1=$theta -v mu1=$mu  '{print ti, (sin(theta1)-mu1*cos(theta1))*9.8*ti}'
 done
+
